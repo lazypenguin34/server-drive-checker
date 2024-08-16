@@ -69,7 +69,7 @@ def main() -> None:
     for drive in drives_to_check:
         # Try to list the contents of each drive. If the path does not exist, that means the drive is missing
         try:
-            os.listdir("H://MSD1000//" + drive)
+            os.listdir("H://MD1000//" + drive)
         except FileNotFoundError:
             missing_drives.append(drive)
     if missing_drives:
