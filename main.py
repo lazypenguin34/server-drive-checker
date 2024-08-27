@@ -1,6 +1,12 @@
 import os
+from dotenv import load_env
 import smtplib
 from email.mime.text import MIMEText
+
+# Import emails and keys from .env file
+from_email = os.getenv("FROM_EMAIL")
+to_email = os.getenv("TO_EMAIL")
+password = os.getenv("PASSWORD")
 
 # Maybe move this to a text file but whatever
 drives_to_check = [
@@ -40,9 +46,6 @@ missing_drives = []
 
 smtp_server = "smtp.gmail.com"
 port = 587
-from_email = "secret@email.com"
-to_email = "secret@email.com"
-password = "secret password"
 subject = "A drive on the basement server is missing"
 
 
